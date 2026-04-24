@@ -59,6 +59,8 @@ namespace safelab_c4_model_design
                 new AlertsNotificationsComponentDiagram(this, contextDiagram, containerDiagram);
             RemoteControlActuationComponentDiagram remoteControlActuationComponentDiagram =
                 new RemoteControlActuationComponentDiagram(this, contextDiagram, containerDiagram);
+            ReportsAnalyticsComponentDiagram reportsAnalyticsComponentDiagram =
+                new ReportsAnalyticsComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
@@ -73,6 +75,7 @@ namespace safelab_c4_model_design
             environmentalComplianceComponentDiagram.Generate();
             alertsNotificationsComponentDiagram.Generate();
             remoteControlActuationComponentDiagram.Generate();
+            reportsAnalyticsComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
