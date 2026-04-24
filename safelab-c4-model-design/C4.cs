@@ -51,6 +51,8 @@ namespace safelab_c4_model_design
                 new DashboardOverviewComponentDiagram(this, contextDiagram, containerDiagram);
             AssetInventoryMonitoringComponentDiagram assetInventoryMonitoringComponentDiagram =
                 new AssetInventoryMonitoringComponentDiagram(this, contextDiagram, containerDiagram);
+            SensorMonitoringComponentDiagram sensorMonitoringComponentDiagram =
+                new SensorMonitoringComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
@@ -61,6 +63,7 @@ namespace safelab_c4_model_design
             subscriptionBillingComponentDiagram.Generate();
             dashboardOverviewComponentDiagram.Generate();
             assetInventoryMonitoringComponentDiagram.Generate();
+            sensorMonitoringComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
