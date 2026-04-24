@@ -45,6 +45,8 @@ namespace safelab_c4_model_design
                 new IdentityAccessComponentDiagram(this, contextDiagram, containerDiagram);
             UserProfilesComponentDiagram userProfilesComponentDiagram =
                 new UserProfilesComponentDiagram(this, contextDiagram, containerDiagram);
+            SubscriptionBillingComponentDiagram subscriptionBillingComponentDiagram =
+                new SubscriptionBillingComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
@@ -52,6 +54,7 @@ namespace safelab_c4_model_design
             webApplicationComponentDiagram.Generate();
             identityAccessComponentDiagram.Generate();
             userProfilesComponentDiagram.Generate();
+            subscriptionBillingComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
