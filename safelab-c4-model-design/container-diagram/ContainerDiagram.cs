@@ -58,7 +58,7 @@ namespace safelab_c4_model_design
             );
 
             database = contextDiagram.safelab.AddContainer(
-                "database",
+                "Database",
                 "Stores users, devices, alerts, subscriptions, reports, and operational data.",
                 "SQL Server"
             );
