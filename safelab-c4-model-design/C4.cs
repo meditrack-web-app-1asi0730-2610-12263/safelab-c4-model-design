@@ -41,11 +41,47 @@ namespace safelab_c4_model_design
             
             WebApplicationComponentDiagram webApplicationComponentDiagram =
                 new WebApplicationComponentDiagram(this, contextDiagram, containerDiagram);
+            IdentityAccessComponentDiagram identityAccessComponentDiagram =
+                new IdentityAccessComponentDiagram(this, contextDiagram, containerDiagram);
+            UserProfilesComponentDiagram userProfilesComponentDiagram =
+                new UserProfilesComponentDiagram(this, contextDiagram, containerDiagram);
+            SubscriptionBillingComponentDiagram subscriptionBillingComponentDiagram =
+                new SubscriptionBillingComponentDiagram(this, contextDiagram, containerDiagram);
+            DashboardOverviewComponentDiagram dashboardOverviewComponentDiagram =
+                new DashboardOverviewComponentDiagram(this, contextDiagram, containerDiagram);
+            AssetInventoryMonitoringComponentDiagram assetInventoryMonitoringComponentDiagram =
+                new AssetInventoryMonitoringComponentDiagram(this, contextDiagram, containerDiagram);
+            SensorMonitoringComponentDiagram sensorMonitoringComponentDiagram =
+                new SensorMonitoringComponentDiagram(this, contextDiagram, containerDiagram);
+            EnvironmentalComplianceComponentDiagram environmentalComplianceComponentDiagram =
+                new EnvironmentalComplianceComponentDiagram(this, contextDiagram, containerDiagram);
+            AlertsNotificationsComponentDiagram alertsNotificationsComponentDiagram =
+                new AlertsNotificationsComponentDiagram(this, contextDiagram, containerDiagram);
+            RemoteControlActuationComponentDiagram remoteControlActuationComponentDiagram =
+                new RemoteControlActuationComponentDiagram(this, contextDiagram, containerDiagram);
+            ReportsAnalyticsComponentDiagram reportsAnalyticsComponentDiagram =
+                new ReportsAnalyticsComponentDiagram(this, contextDiagram, containerDiagram);
+            IncidentManagementComponentDiagram incidentManagementComponentDiagram =
+                new IncidentManagementComponentDiagram(this, contextDiagram, containerDiagram);
+            AuditTraceabilityComponentDiagram auditTraceabilityComponentDiagram =
+                new AuditTraceabilityComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
             containerDiagram.Generate();
             webApplicationComponentDiagram.Generate();
+            identityAccessComponentDiagram.Generate();
+            userProfilesComponentDiagram.Generate();
+            subscriptionBillingComponentDiagram.Generate();
+            dashboardOverviewComponentDiagram.Generate();
+            assetInventoryMonitoringComponentDiagram.Generate();
+            sensorMonitoringComponentDiagram.Generate();
+            environmentalComplianceComponentDiagram.Generate();
+            alertsNotificationsComponentDiagram.Generate();
+            remoteControlActuationComponentDiagram.Generate();
+            reportsAnalyticsComponentDiagram.Generate();
+            incidentManagementComponentDiagram.Generate();
+            auditTraceabilityComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
