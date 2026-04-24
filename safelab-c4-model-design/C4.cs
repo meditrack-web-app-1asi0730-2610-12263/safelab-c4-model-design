@@ -41,11 +41,14 @@ namespace safelab_c4_model_design
             
             WebApplicationComponentDiagram webApplicationComponentDiagram =
                 new WebApplicationComponentDiagram(this, contextDiagram, containerDiagram);
+            IdentityAccessComponentDiagram identityAccessComponentDiagram =
+                new IdentityAccessComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
             containerDiagram.Generate();
             webApplicationComponentDiagram.Generate();
+            identityAccessComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
