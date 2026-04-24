@@ -55,6 +55,8 @@ namespace safelab_c4_model_design
                 new SensorMonitoringComponentDiagram(this, contextDiagram, containerDiagram);
             EnvironmentalComplianceComponentDiagram environmentalComplianceComponentDiagram =
                 new EnvironmentalComplianceComponentDiagram(this, contextDiagram, containerDiagram);
+            AlertsNotificationsComponentDiagram alertsNotificationsComponentDiagram =
+                new AlertsNotificationsComponentDiagram(this, contextDiagram, containerDiagram);
             
             // Generate diagrams
             contextDiagram.Generate();
@@ -67,6 +69,7 @@ namespace safelab_c4_model_design
             assetInventoryMonitoringComponentDiagram.Generate();
             sensorMonitoringComponentDiagram.Generate();
             environmentalComplianceComponentDiagram.Generate();
+            alertsNotificationsComponentDiagram.Generate();
             
             // Upload workspace to Structurizr
             StructurizrClient.PutWorkspace(workspaceId, Workspace);
